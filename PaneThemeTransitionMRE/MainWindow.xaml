@@ -24,7 +24,10 @@
             </Rectangle>
         </Grid>
         <Grid x:Name="RightGrid2" HorizontalAlignment="Right">
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
             <Rectangle x:Name="RightRect2" Height="500" Width="500" Fill="Red">
                 <Rectangle.Transitions>
                     <TransitionCollection>
