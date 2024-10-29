@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="PaneThemeTransitionMRE.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PaneThemeTransitionMRE"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="BaseGrid">
+        <ToggleSwitch Toggled="ToggleSwitch_Toggled" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid x:Name="LeftGrid" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" x:Name="LeftRect" Height="500" Width="500" Fill="Blue">
+                <Rectangle.Transitions>
+                    <TransitionCollection>
+                        <PaneThemeTransition Edge="Left" />
+                    </TransitionCollection>
+                </Rectangle.Transitions>
+            </Rectangle>
+        </Grid>
+        <Grid x:Name="RightGrid2" HorizontalAlignment="Right">
+            
+            <Rectangle x:Name="RightRect2" Height="500" Width="500" Fill="Red">
+                <Rectangle.Transitions>
+                    <TransitionCollection>
+                        <PaneThemeTransition Edge="Right" />
+                    </TransitionCollection>
+                </Rectangle.Transitions>
+            </Rectangle>
+        </Grid>
+        <Rectangle x:Name="RightRect" Height="300" Width="500" Fill="Green" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Rectangle.Transitions>
+                <TransitionCollection>
+                    <PaneThemeTransition Edge="Right" />
+                </TransitionCollection>
+            </Rectangle.Transitions>
+        </Rectangle>
+
+        <Grid x:Name="BottomGrid" VerticalAlignment="Bottom" >
+            <Rectangle x:Name="BottomRect" Height="500" Width="500" Fill="Yellow">
+                <Rectangle.Transitions>
+                    <TransitionCollection>
+                        <PaneThemeTransition Edge="Bottom" />
+                    </TransitionCollection>
+                </Rectangle.Transitions>
+            </Rectangle>
+        </Grid>
+
+    </Grid>
+</Window>
